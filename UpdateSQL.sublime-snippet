@@ -1,0 +1,16 @@
+<snippet>
+	<content><![CDATA[
+# create update sql
+sqlUpdate =
+	%Q{ update ${1:TableName}                                           \n} +
+	%Q{    set ${2:SetColumn} = '${3:SetValue}'                         \n} +
+	%Q{  where ${4:WhereColumn} = '${5:WhereValue}'                     \n};
+
+# run sql
+self.runSQL(sqlUpdate);
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>updatesql</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

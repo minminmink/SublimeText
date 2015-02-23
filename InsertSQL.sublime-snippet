@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+# create insert sql
+sqlInsert =
+	%Q{ insert into ${1:TableName} (                                    \n} +
+	%Q{   ${2:ColumnName}, ${3:ColumnName}                              \n} +
+	%Q{ ) values (                                                      \n} +
+	%Q{   '${4:ColumnValue}', '${5:ColumnValue}')                       \n};
+
+# run sql
+self.runSQL(sqlInsert);
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>insertsql</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>
