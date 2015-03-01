@@ -13,3 +13,4 @@ from package installer
 + input below to repository path input area that viewed under window.
     https://github.com/kope88/InputSequence.git
 + run "Install Package" from package control.
+    shortcut : Ctrl+Shift+0
