@@ -1,0 +1,36 @@
+<snippet>
+	<content><![CDATA[
+
+# ###########################################################################
+# #
+# #   post /api/${1:SiteAddr}
+# #
+# ###########################################################################
+
+post "/api/${1:SiteAddr}" do
+
+	# common api check
+	checkApiCall("regNico", params) do
+		redirect "/${2:SiteAddrRedirect}";
+		return
+	end
+
+	# call api
+	self.httpPost_${1:SiteAddr}();
+
+	# redirect to root
+	redirect "/${2:SiteAddrRedirect}";
+
+end
+
+def httpPost_${1:SiteAddr}()
+
+
+end
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>postsite</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.ruby</scope>
+</snippet>
