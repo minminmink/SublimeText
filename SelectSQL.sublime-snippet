@@ -1,0 +1,22 @@
+<snippet>
+	<content><![CDATA[
+# create sql
+sqlSelect =
+	%Q{ select *                                                        \n} +
+	%Q{   from (                                                        \n} +
+	%Q{ select ${1:Item1}                                               \n} +
+	%Q{       ,${2:Item2}                                               \n} +
+	%Q{   from ${3:TableName}                                           \n} +
+	%Q{  where ${4:Item3} = '${5:Value1}'                               \n} +
+	%Q{  order by ${6:Item4} desc ) as ${7:TableName}                   \n} +
+	%Q{  limit 10 };
+
+# run sql
+rstDataset = @objClient.query(sqlSelect);
+return rstDataset;
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>selectsql</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.ruby</scope>
+</snippet>
